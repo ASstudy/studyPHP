@@ -6,14 +6,10 @@
         $count = (int)trim(fgets(STDIN, 4096));
     } while ($count <= 0);
 
-    // do {
-    //     echo $count." ";
-    //     $count -= 1;
-    // } while ($count !== -1);
     while($count >= 0){
-        echo $count--." ";
+        echo --$count." ";
     }
 
     echo "ｘの値は".$count."になりました。";
 
-    //普通にwhileで後半書けばよかった
+    //先にデクリメントされるので5と同じ値を入力しても5で表示された数より-1された数が表示されるはず
